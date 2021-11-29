@@ -10,9 +10,12 @@ const connect = require("./config/db")
 
 const jobcontroller = require("./controllers/job.controller");
 const companycontroller = require("./controllers/company.controller");
+const mostcontroller = require("./controllers/most.controller");
 
 app.use("/companies", companycontroller);
+app.use("/most", mostcontroller);
 app.use("/jobs" ,jobcontroller);
+
 
 
 app.listen(4444, async () =>{
